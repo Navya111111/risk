@@ -1,0 +1,7 @@
+streamlit
+pandas
+duckdb
+langchain
+langchain-core
+langchain-groq
+pydantic>=2.7,<3
