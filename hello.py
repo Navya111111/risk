@@ -9,9 +9,12 @@ from langchain_core.prompts import PromptTemplate
 # Load environment variables
 # --------------------------------------------------
 import os
-from dotenv import load_dotenv
 
-load_dotenv()   # works locally, ignored in cloud
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # dotenv not installed in cloud, safe to ignore
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
